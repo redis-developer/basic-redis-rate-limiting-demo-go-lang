@@ -1,6 +1,6 @@
 # Redis rate-limiting example
 
-![alt text](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/main/preview.png?raw=true)
+![alt text](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/master/preview.png?raw=true)
 
 ## How it works
 
