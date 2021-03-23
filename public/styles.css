@@ -1,0 +1,24 @@
+#result,
+#limit-select {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#limit-select {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#limit-select {
+    max-width: 280px;
+}
+
+@media screen and (min-width: 680px) {
+    body {
+        background-image: url('/RedisLabsIllustration.svg');
+        background-repeat: no-repeat;
+        background-size: 340px;
+        background-position: right top;
+    }
+}

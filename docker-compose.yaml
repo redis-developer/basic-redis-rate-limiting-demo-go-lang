@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:5
+    container_name: ratelimiting-redis
+    hostname: ratelimiting-redis
+    restart: always
+    networks:
+      - ratelimiting-demo
+  api:
+    build:
+      context: .
+    env_file:
+      - .env
+    image: ratelimiting-api
+    container_name: ratelimiting-api
+    hostname: ratelimiting-api
+    ports:
+    - 5000:5000
+    volumes:
+    - ./public:/public
+    restart: always
+    depends_on:
+      - redis
+    networks:
+      - ratelimiting-demo
+networks:
+  ratelimiting-demo:
+    driver: bridge
+

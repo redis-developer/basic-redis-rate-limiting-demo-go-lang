@@ -1,0 +1,32 @@
+{
+  "app_name": "Redis rate-limiting example",
+  "description": "Simple app that demonstrates rate-limiting feature using Redis",
+  "type": "Building Block",
+  "contributed_by": "Redis Labs",
+  "repo_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang",
+  "download_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/archive/main.zip",
+  "hosted_url": "",
+  "quick_deploy": "true",
+  "deploy_buttons": [
+    {
+      "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang"
+    },
+    {
+      "vercel": "https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang&env=API_HOST,API_PORT,API_PUBLIC_PATH,REDIS_HOST,REDIS_PORT,REDIS_PASSWORD"
+    },
+    {
+      "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git"
+    }
+  ],
+  "language": ["Golang"],
+  "redis_commands": ["SETEX", "ICNR", "GET"],
+  "redis_features": [],
+  "redis_modules": [],
+  "app_image_urls": [
+    "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/main/preview.png?raw=true"
+  ],
+  "youtube_url": "",
+  "special_tags": [],
+  "verticals": ["Analitics"],
+  "markdown": "https://raw.githubusercontent.com/redislabs-training/redis-sitesearch/master/README.md"
+}
