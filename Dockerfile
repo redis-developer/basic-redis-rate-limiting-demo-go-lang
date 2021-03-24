@@ -23,7 +23,6 @@ RUN mkdir /api
 WORKDIR /build
 
 COPY --from=builder /build/bin /api/
-COPY seed.json /api/
 COPY public /api/public
 
 WORKDIR /api
