@@ -1,19 +1,24 @@
 package api
 
 import (
+	"crypto/md5"
+	"fmt"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/controller"
 	"log"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 const defaultLimit = 10
 
+const cookieLimiterName = "user-limiter"
+
 func limiter(c *gin.Context) {
 
-	user, err := c.Request.Cookie("user")
+	user, err := c.Request.Cookie(cookieLimiterName)
 	if err != nil {
 		log.Println(err)
 		c.Status(http.StatusNotAcceptable)
@@ -30,12 +35,17 @@ func limiter(c *gin.Context) {
 	c.Header("X-RateLimit-Limit", strconv.Itoa(defaultLimit))
 	c.Header("X-RateLimit-Remaining", strconv.Itoa(10-requests))
 
-
 }
 
 func router(publicPath string) http.Handler {
 
 	router := gin.Default()
+	router.Use(func(context *gin.Context) {
+		_, err := context.Request.Cookie(cookieLimiterName)
+		if err == http.ErrNoCookie {
+			context.SetCookie(cookieLimiterName, fmt.Sprintf("%x", md5.Sum([]byte(time.Now().String()))), 0, "", "", false, false)
+		}
+	})
 	router.Use(static.Serve("/", static.LocalFile(publicPath, true)))
 
 	api := router.Group("/api")
