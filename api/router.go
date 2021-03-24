@@ -4,6 +4,7 @@ import (
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/controller"
+	"log"
 	"net/http"
 	"strconv"
 )
@@ -14,6 +15,7 @@ func limiter(c *gin.Context) {
 
 	user, err := c.Request.Cookie("user")
 	if err != nil {
+		log.Println(err)
 		c.Status(http.StatusNotAcceptable)
 		c.Abort()
 		return
@@ -27,7 +29,6 @@ func limiter(c *gin.Context) {
 
 	c.Header("X-RateLimit-Limit", strconv.Itoa(defaultLimit))
 	c.Header("X-RateLimit-Remaining", strconv.Itoa(10-requests))
-
 
 
 }
