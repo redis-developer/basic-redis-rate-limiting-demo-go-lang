@@ -10,18 +10,25 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o bin .
 
 FROM golang
 
-RUN mkdir /api
-RUN addgroup --system redis
-RUN adduser --system --disabled-password --no-create-home --home /api --ingroup redis redis
-RUN chown redis:redis /api
+ENV PORT=$PORT
+ENV API_HOST=""
+ENV API_PORT=5000
+ENV API_PUBLIC_PATH=/api/public
+ENV REDIS_HOST=""
+ENV REDIS_PORT=6379
+ENV REDIS_PASSWORD=""
 
-USER redis
+RUN mkdir /api
+
+WORKDIR /build
 
 COPY --from=builder /build/bin /api/
+COPY seed.json /api/
+COPY public /api/public
 
 WORKDIR /api
 
-LABEL   Name="Redis Rate Limiting Demo"
+LABEL   Name="Rate Limitinh Api"
 
 #Run service
 ENTRYPOINT ["./bin"]
