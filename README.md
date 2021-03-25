@@ -8,13 +8,51 @@ This app will block connections from a client after surpassing certain amount of
 
 The application will return after each request the following headers. That will let the user know how many requests they have remaining before the run over the limit.
 
-```
-X-RateLimit-Limit: 10
-X-RateLimit-Remaining: 9
-```
 
 On the 10th run server should return an HTTP status code of **429 Too Many Requests**
 
+### Cookies
+
+User identification based on cookies, on first request user will receive a cookie if it not exists
+
+`CookieName: user-limiter`
+
+`CookieValue: md5(<current time>)`
+
+`<current time>` - request time in a format: `2006-01-02 15:04:05.999999999 -0700 MST`
+
+### Redis
+
+Read requests for user by `user-limiter` cookie
+
+`get requests.<USER_IDENTIFIER>` - get `USER_IDENTIFIER` from request cookie
+
+Set request counter with expired 10sec if not exist in `requests.<USER_IDENTIFIER>`
+
+`setex requests.<USER_IDENTIFIER> 10 0`
+
+Increment requests counter for each of user request
+
+`incr requests.<USER_IDENTIFIER>`
+
+Get requests number for user
+
+`get requests.<USER_IDENTIFIER>`
+
+### Response
+
+#### Status codes
+
+`200 - OK` - responded `PONG` 
+
+`406 - Not Acceptable` - could not read cookie from request, it may have effect when cookies not allowed on browser side
+
+`429 - To Many Requests` - user send more than 10 requests / 10sec
+
+#### Headers
+`X-RateLimit-Limit: 10` - allowed number of limits per 10sec
+
+`X-RateLimit-Remaining: 9` - number of left request in 10sec window
 ### Available commands
 
 ```
