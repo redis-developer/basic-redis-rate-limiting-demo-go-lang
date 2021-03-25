@@ -12,11 +12,6 @@ Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang&env=API_HOST,API_PORT,API_PUBLIC_PATH,REDIS_HOST,REDIS_PORT,REDIS_PASSWORD)
-
-
 # Redis rate-limiting example
 
 ![alt text](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/master/preview.png?raw=true)

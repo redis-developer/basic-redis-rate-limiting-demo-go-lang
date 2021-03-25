@@ -19,12 +19,12 @@
 	    "required": true
     },
     "API_PUBLIC_PATH": {
-      "description": "Public path to frontend",
-      "value": "/api/public"
+      "description": "Public path to frontend, example: /api/public",
+      "required": true
     },
     "API_PORT": {
-      "description": "Api public port",
-      "value": 5000
+      "description": "Api public port, example: 5000",
+      "required": true
     }
   }
 }
