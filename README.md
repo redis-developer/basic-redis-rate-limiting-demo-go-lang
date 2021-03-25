@@ -1,3 +1,22 @@
+
+# Deployment
+
+To make deploys work, you need to create free account in https://redislabs.com/try-free/ and get Redis' instance informations - REDIS_HOST, REDIS_PORT and REDIS_PASSWORD. You must pass them as environmental variables (in .env file or by server config, like `Heroku Config Variables`).
+
+### Google Cloud Run
+
+[![Run on Google
+Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git)
+
+### Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang&env=API_HOST,API_PORT,API_PUBLIC_PATH,REDIS_HOST,REDIS_PORT,REDIS_PASSWORD)
+
+
 # Redis rate-limiting example
 
 ![alt text](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/master/preview.png?raw=true)
@@ -94,20 +113,3 @@ http://localhost:5000
 -   REDIS_HOST - host for redis instance
 -   REDIS_PORT - port for redis instance, default is 6379
 -   REDIS_PASSWORD - password for redis. Running redis by docker-compose, there's no password. Running by https://redislabs.com/try-free/ you have to pass this variable.
-
-## Deployment
-
-To make deploys work, you need to create free account in https://redislabs.com/try-free/ and get Redis' instance informations - REDIS_HOST, REDIS_PORT and REDIS_PASSWORD. You must pass them as environmental variables (in .env file or by server config, like `Heroku Config Variables`).
-
-### Google Cloud Run
-
-[![Run on Google
-Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git)
-
-### Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang&env=API_HOST,API_PORT,API_PUBLIC_PATH,REDIS_HOST,REDIS_PORT,REDIS_PASSWORD)
