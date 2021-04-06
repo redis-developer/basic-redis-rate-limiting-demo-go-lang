@@ -12,15 +12,12 @@
       "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang"
     },
     {
-      "vercel": "https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang&env=API_HOST,API_PORT,API_PUBLIC_PATH,REDIS_HOST,REDIS_PORT,REDIS_PASSWORD"
-    },
-    {
       "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git"
     }
   ],
   "language": ["Golang"],
   "redis_commands": ["SETEX", "ICNR", "GET"],
-  "redis_features": [],
+  "redis_features": ["Rate Limiting"],
   "redis_modules": [],
   "app_image_urls": [
     "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/main/preview.png?raw=true"
