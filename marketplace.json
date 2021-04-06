@@ -15,7 +15,7 @@
       "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git"
     }
   ],
-  "language": ["Golang"],
+  "language": ["Go"],
   "redis_commands": ["SETEX", "ICNR", "GET"],
   "redis_features": ["Rate Limiting"],
   "redis_modules": [],
