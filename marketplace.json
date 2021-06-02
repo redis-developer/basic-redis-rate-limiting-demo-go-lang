@@ -1,6 +1,6 @@
 {
-  "app_name": "Redis rate-limiting example",
-  "description": "Simple app that demonstrates rate-limiting feature using Redis",
+  "app_name": "A Rate Limiting app using Go and Redis",
+  "description": "A Rate Limiting app that demonstrates rate-limiting feature using Go and Redis",
   "type": "Building Block",
   "contributed_by": "Redis Labs",
   "repo_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang",
@@ -20,10 +20,10 @@
   "redis_features": ["Rate Limiting"],
   "redis_modules": [],
   "app_image_urls": [
-    "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/raw/master/preview.png"
+    "https://raw.githubusercontent.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/master/preview.png"
   ],
   "youtube_url": "https://www.youtube.com/watch?v=_mFWjk7ONa8",
   "special_tags": [],
   "verticals": ["Analitics"],
-  "markdown": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/raw/master/README.md"
+  "markdown": "https://raw.githubusercontent.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/master/README.md"
 }
