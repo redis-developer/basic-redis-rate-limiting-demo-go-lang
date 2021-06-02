@@ -1,6 +1,5 @@
-# Redis rate-limiting example
+# Rate Limiting Demo app using Go and Redis
 
-![rate-limiting example screenshot](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/blob/master/preview.png?raw=true)
 
 # Overview video
 
