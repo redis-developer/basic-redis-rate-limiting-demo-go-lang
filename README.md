@@ -1,4 +1,4 @@
-# Rate Limiting Demo app using Go and Redis
+# Rate Limiting app using Go and Redis
 
 A Rate-Limiter app built using Go and uses Redis as a backend
 
