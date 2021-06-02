@@ -1,13 +1,12 @@
 # Rate Limiting Demo app using Go and Redis
 
-
-# Overview video
-
-Here's a short video that explains the project and how it uses Redis:
+A Rate-Limiter app built using Go and uses Redis as a backend
 
 
+## Technical Stack
 
-[![Watch the video on YouTube](https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/raw/master/public/YTThumbnail.png)](https://www.youtube.com/watch?v=_mFWjk7ONa8)
+- Frontend: Go
+- Backend: Redis
 
 ## How it works
 
