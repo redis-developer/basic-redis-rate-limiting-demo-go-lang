@@ -1,6 +1,6 @@
 {
-  "app_name": "A Rate Limiting app using Go and Redis",
-  "description": "A Rate Limiting app that demonstrates rate-limiting feature using Go and Redis",
+  "app_name": "A Rate Limiting Demo app using Go and Redis",
+  "description": "A Rate Limiting Demo app that demonstrates rate-limiting feature using Go and Redis",
   "type": "Building Block",
   "contributed_by": "Redis Labs",
   "repo_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang",
