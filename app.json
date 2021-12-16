@@ -5,6 +5,7 @@
   "repository": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang",
   "logo": "https://redis.io/images/redis-white.png",
   "keywords": ["golang", "gin", "redis"],
+  "addons": ["rediscloud:30"],
   "env": {
     "REDIS_HOST": {
       "description": "Redis server host",
