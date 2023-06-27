@@ -2,7 +2,7 @@
   "app_name": "Rate Limiting app in Go",
   "description": "Rate Limiting app that demonstrates rate-limiting feature using Go and Redis",
   "type": "Building Block",
-  "contributed_by": "Redis Labs",
+  "contributed_by": "Redis",
   "repo_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang",
   "preview_image_url": "https://raw.githubusercontent.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/master/images/app_preview_image.png",
   "download_url": "https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/archive/main.zip",
@@ -16,15 +16,25 @@
       "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/basic-redis-rate-limiting-demo-go-lang.git"
     }
   ],
-  "language": ["Go"],
-  "redis_commands": ["SETEX", "ICNR", "GET"],
-  "redis_features": ["Rate Limiting"],
-  "redis_modules": [],
+  "language": [
+    "Go"
+  ],
+  "redis_commands": [
+    "SETEX",
+    "ICNR",
+    "GET"
+  ],
+  "redis_use_cases": [
+    "Rate Limiting"
+  ],
+  "redis_features": [],
   "app_image_urls": [
     "https://raw.githubusercontent.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/master/preview.png"
   ],
   "youtube_url": "https://www.youtube.com/watch?v=_mFWjk7ONa8",
   "special_tags": [],
-  "verticals": ["Others"],
+  "verticals": [
+    "Others"
+  ],
   "markdown": "https://raw.githubusercontent.com/redis-developer/basic-redis-rate-limiting-demo-go-lang/master/README.md"
 }
